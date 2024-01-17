@@ -6,5 +6,8 @@ sudo yum upgrade -y
 sudo dnf install java-17-amazon-corretto -y
 sudo yum install jenkins -y
 sudo systemctl enable jenkins
-sudo systemctl start jenkins
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+sudo systemctl start jenkinsç
+jenkinsPath="/var/lib/jenkins/secrets/initialAdminPassword"
+if [-e $jenkinsPath ]; then
+sudo cat $jenkinsPath
+fi
