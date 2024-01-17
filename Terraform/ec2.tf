@@ -88,7 +88,7 @@ resource "null_resource" "name" {
   }
 
   provisioner "file" {
-    source      = "~/installjenkins.sh"
+    source      = "~/scripts/installjenkins.sh"
     destination = "/tmp/installjenkins.sh"
   }
 
